@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text],input[type=password] {
+
+	 width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button{
+background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+</style>
+<head>
+	<title>Register</title>
+	<script>
+	function validate(e)
+	{
+		var username=document.getElementByName("uname").value;
+		var userpwd=document.getElementByName("upwd").value;
+		if(username.length==0)
+		{
+			alert("you must enter username");
+			return;
+		}
+		if(userpwd.length==0)
+		{
+			alert("you must enter password");
+			return;
+		}
+	}
+	window.onload=function(){
+	document.getElementById("mylog").addEventListener("submit",function(e){
+	validate(e);
+	});
+	</script>
+</head>
+<body>
+<form id="mylog" method="post">
+		<h1>Register</h1>
+		<label><b>Username</b></label>
+		<input type="text" placeholder="Enter Username" name="uname" required>
+		<label><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="upwd" required>
+		<label><b>Email</b></label>
+		<input type="text" placeholder="Enter email" name="uemail" required>
+		<label><b>Ph.NO</b></label>
+		<input type="text" placeholder="Enter Ph.No" name="phno" required>
+		<label><b>Gender</b></label>
+		Male:<input type="radio" name="gender">
+		Female:<input type="radio" name="gender"><br/>
+		<label><b>Address</b></label>
+		<textarea cols="50" rows="4" placeholder="Enter address" required></textarea>
+		<button type="submit">Register</button>
+
+
+	
+
+
+
+
+</form>
+</body>
+</html>
